@@ -10,7 +10,7 @@ import {
   ChatState,
   provideCopilotChatLabels,
   provideCopilotKit,
-} from "@copilotkitnext/angular";
+} from "@copilotkit/angular";
 import { Message } from "@ag-ui/client";
 import { CustomDisclaimerComponent } from "../components/custom-disclaimer.component";
 import { CustomInputComponent } from "../components/custom-input.component";
@@ -75,7 +75,7 @@ import {
   CopilotChatInput,
   provideCopilotKit,
   provideCopilotChatLabels
-} from '@copilotkitnext/angular';
+} from '@copilotkit/angular';
 import { Message } from '@ag-ui/client';
 
 // Custom disclaimer component
@@ -209,7 +209,7 @@ import {
   ChatState,
   provideCopilotKit,
   provideCopilotChatLabels
-} from '@copilotkitnext/angular';
+} from '@copilotkit/angular';
 import { Message } from '@ag-ui/client';
 
 // Custom input component
@@ -308,7 +308,7 @@ export class CustomInputExampleComponent {
     },
     {
       id: 'assistant-1',
-      content: 'That\'s a beautiful custom input component! The gradient and styling look great.',
+      content: 'That's a beautiful custom input component! The gradient and styling look great.',
       role: 'assistant'
     }
   ];
@@ -364,7 +364,7 @@ import {
   CopilotChatInput,
   provideCopilotKit,
   provideCopilotChatLabels
-} from '@copilotkitnext/angular';
+} from '@copilotkit/angular';
 import { Message } from '@ag-ui/client';
 
 // Custom scroll button component
@@ -511,7 +511,7 @@ import {
   CopilotChatInput,
   provideCopilotKit,
   provideCopilotChatLabels
-} from '@copilotkitnext/angular';
+} from '@copilotkit/angular';
 import { Message } from '@ag-ui/client';
 
 &#64;Component({
@@ -616,7 +616,7 @@ import {
   ChatState,
   provideCopilotKit,
   provideCopilotChatLabels
-} from '@copilotkitnext/angular';
+} from '@copilotkit/angular';
 import { Message } from '@ag-ui/client';
 
 // Minimal custom input component with service injection
@@ -741,16 +741,14 @@ export class ServiceBasedExampleComponent {
       template: `
         <div
           style="
-          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-          padding: 20px;
-          border-radius: 15px;
-          margin: 10px;
-        "
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 10px;
+          "
         >
-          <h4 style="color: white; margin: 0 0 10px 0;">
-            Service-Based Custom Input
-          </h4>
-          <div style="display: flex; gap: 10px;">
+          <h4 style="color: white; margin: 0 0 10px 0">Service-Based Custom Input</h4>
+          <div style="display: flex; gap: 10px">
             <input
               type="text"
               [(ngModel)]="value"
@@ -783,7 +781,7 @@ export class ServiceBasedExampleComponent {
             </button>
           </div>
           <p
-            style="color: rgba(255, 255, 255, 0.9); font-size: 12px; margin: 8px 0 0 0;"
+            style="color: rgba(255, 255, 255, 0.9); font-size: 12px; margin: 8px 0 0 0"
           >
             This component uses ChatState.submitInput()
           </p>

@@ -20,9 +20,24 @@ AI agent framework with three layers: **Frontend** (React/Angular/Vanilla) → *
 ## Essentials
 
 - **Nx monorepo** — always run tasks through `nx` (`nx run`, `nx run-many`, `nx affected`), never the underlying tooling directly.
-- **V1 wraps V2** — V2 (`@copilotkitnext/`) is the real implementation. V1 (`@copilotkit/`) is the public compatibility layer that delegates to V2. Build new features in V2 first. Add V1 wrappers only if backward compatibility is needed.
+- **Flat package structure** — All packages live under `packages/` with the `@copilotkit/` scope. Some packages have `v1/` and `v2/` internal directories for backward compatibility, but they're a single published package.
 - **Simplicity** — prefer the simplest correct solution. For non-trivial changes, consider if there's a cleaner approach before committing.
 - **Worktrees** — always work in a git worktree for isolation. See [Git & PRs](.claude/docs/git.md) for the full workflow.
+
+## Private Agent Instructions
+
+Individual developers may optionally create a `private-agents.md` file at the repo root. This file is gitignored and not shared with the team -- it contains personal agent instructions, workflow overrides, or context that applies only to that developer's work. If `private-agents.md` exists, read it and follow its instructions (they take precedence over the defaults in this file where they conflict).
+
+## Internal Skills
+
+The team maintains shared AI agent skills at [CopilotKit/internal-skills](https://github.com/CopilotKit/internal-skills). If installed as a Claude Code plugin, these skills are available automatically. Key skills relevant to this repo:
+
+- **copilotkit-ui-theme** — CopilotCloud visual design system (colors, typography, glass effects, blur circles). Use when building any UI that should look like an official CopilotKit product.
+- **copilotkit-branding** — Brand rules, logos, and visual identity guidelines.
+- **copilotkit-dev-workflow** — Internal dev workflow conventions for this monorepo.
+- **cr-loop** — Automated code review and fix loop.
+
+If you need a skill and don't have the plugin installed, clone the repo and read the relevant `skills/<name>/SKILL.md` directly.
 
 ## Reference (read when relevant to your task)
 

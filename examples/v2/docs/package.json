@@ -1,5 +1,5 @@
 {
-  "name": "@copilotkitnext/docs",
+  "name": "@copilotkit/docs",
   "version": "0.1.8",
   "private": true,
   "scripts": {
@@ -7,10 +7,10 @@
     "lint": "mintlify broken-links",
     "check-types": "echo 'No TypeScript compilation needed for Mintlify docs'"
   },
-  "devDependencies": {
-    "mintlify": "^4.2.127"
-  },
   "dependencies": {
     "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "mintlify": "^4.2.127"
   }
 }
